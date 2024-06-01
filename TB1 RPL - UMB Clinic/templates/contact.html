@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMB Clinic</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="show-popup">
+    <header>
+        <nav class="navbar">
+            
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="/dashboard">Home</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/booking">Booking</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/contact">Contact us</a></li>
+            </ul>
+            <button class="login-btn"><a href="/logout">LOG OUT</a></button>
+    </header>
+    <div class="bg1-overlay">
+        <div class="contact-form">
+            <h1>Contact US</h1>
+            <h2>Anda Bisa Menghubungi Dan Bertanya Seputar Layanan Kesehatan Pada Kami Melalui Form Dibawah Ini</h2>  
+        </div>
+        <div class="contact-us">
+        <form action="/contact" method="post">
+            <input type="text" name="fname"   class="form-control" placeholder="Enter First Name"> <br>
+            <input type="text" name="lname"  class="form-control" placeholder="Enter last Name"> <br>
+            <input type="email" name="email"  class="form-control" placeholder="Enter Email"> <br>
+            <input type="text" name="mobile"  class="form-control" placeholder="Enter Mobile Number"> <br>
+            <input type="text" name="pesan" class="form-control" placeholder="Enter Your Message"> <br>
+            <input type="submit" class="form-control submit" value="submit" >
+        </form>
+        </div>
+    </div>
+</body>
+</html>

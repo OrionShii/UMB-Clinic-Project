@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website RPL UMB CLINIC</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="/dashboard">Home</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/booking">Booking</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/contact">Contact us</a></li>
+            </ul>
+            <button class="login-btn"><a href="/logout">LOG OUT</a></button>
+        </nav>
+    </header>
+    <div class="blur-bg-overlay"></div>
+    <div class="container">
+        <div class="doctor-cards">
+            {% for dokter in dokters %}
+            <div class="doctor-card">
+                <img src="{{ url_for('static', filename=dokter.image) }}" alt="{{dokter.name}}" class="doctor-photo">
+                <div class="doctor-details">
+                    <h4>{{dokter.name}}</h4>
+                    <p>Spesialis: {{dokter.spesialis}}</p>
+                    <p>Jenis Kelamin: {{dokter.jenis_kelamin}}</p>
+                    <p>Status: {{dokter.available}}</p>
+                    {% if dokter.available == 'avail' %}
+                        <form method="post" action="/booking">
+                            <input class='noinput' name="user" value="{{session['username']}}">
+                            <input type="hidden" name="dokter" value="{{dokter.name}}">
+                            <button class="green" type="submit">Booking</button>
+                        </form>
+                    {% elif dokter.available == 'sibuk' %}
+                        {% if session['username'] == dokter.pasien %}
+                            <form method="post" action="/booking_selesai">
+                                <input class='noinput' name="user" value="{{session['username']}}">
+                                <input type="hidden" name="dokter" value="{{dokter.name}}">
+                                <button class="red" type="submit">Selesaikan Pertemuan</button>
+                            </form>
+                        {% else %}
+                            <p>Dokter ini sedang sibuk</p>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
