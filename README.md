@@ -7,3 +7,5 @@ Contact Us: Communicate with the clinic via email and other services for inquiri
 The UMB Clinic website is designed to make healthcare services more accessible and convenient for all users.
 
 I developed this website using HTML, CSS, SQL, and the Flask Python/Micro framework."
+
+Ini Adalah Tugas Kelompok RPL 
