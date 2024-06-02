@@ -1,19 +1,30 @@
-"UMB Clinic
-This website aims to facilitate online consultations with doctors, making access to healthcare services more convenient for patients and prospective patients. Key features include:
+**UMB Clinic Website**
+The UMB Clinic website is designed to facilitate online consultations with doctors, enhancing access to healthcare services and improving convenience for patients and prospective patients. Key features of the website include:
 
-Login and Registration: Secure authentication linked to the database for seamless access.
+**Login and Registration:** Secure authentication linked to the database ensures seamless access for users.
 
-Consultation Booking: Schedule consultations through a system connected to the database.
+**Consultation Booking:** Users can schedule consultations through a system connected to the database, enabling efficient appointment management.
 
-Contact Us: Communicate with the clinic via email and other services for inquiries and support.
+**Contact Us:** The website provides options for users to communicate with the clinic via email and other services for inquiries and support.
 
-The UMB Clinic website is designed to make healthcare services more accessible and convenient for all users.
+The UMB Clinic website is developed with the goal of making healthcare services more accessible and convenient for all users.
 
-We developed this website using HTML, CSS, SQL, and the Flask Python/Micro framework."
+**Technology Stack**
+- Frontend: HTML, CSS
+- Backend: Flask Python/Micro framework
+- Database: SQL
 
-This Was My Group Project
-# Contributors
-- [@amarps](https://github.com/amarps)
-- [@OrionShii](https://github.com/OrionShii)
-- [@asrulfami](https://github.com/asrulfami)
-- [@sheesheeee](https://github.com/sheesheeee)
+**Contributors**
+- @amarps
+- @OrionShii
+- @asrulfami
+- @sheesheeee
+
+**How to Contribute**
+- Fork the repository.
+- Create a new branch (git checkout -b branch-name).
+- Make changes as needed.
+- Commit and push your changes to your branch.
+- Create a pull request to the main branch.
+
+Feel free to contribute to the improvement and development of the UMB Clinic website!
