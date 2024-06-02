@@ -22,7 +22,7 @@ The UMB Clinic website is developed with the goal of making healthcare services 
 
 **How to Contribute**
 - Fork the repository.
-- Create a new branch (git checkout -b branch-name).
+- Create a new branch ```(git checkout -b branch-name).```
 - Make changes as needed.
 - Commit and push your changes to your branch.
 - Create a pull request to the main branch.
