@@ -15,10 +15,10 @@ The UMB Clinic website is developed with the goal of making healthcare services 
 - Database: SQL
 
 **Contributors**
-- @amarps
-- @OrionShii
-- @asrulfami
-- @sheesheeee
+@amarps
+@OrionShii
+@asrulfami
+@sheesheeee
 
 **How to Contribute**
 - Fork the repository.
