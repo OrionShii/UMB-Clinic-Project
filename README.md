@@ -14,11 +14,11 @@ The UMB Clinic website is developed with the goal of making healthcare services 
 - Backend: Flask Python/Micro framework
 - Database: SQL
 
-**Contributors**
-@amarps
-@OrionShii
-@asrulfami
-@sheesheeee
+# Contributors
+- [@amarps](https://github.com/amarps)
+- [@OrionShii](https://github.com/OrionShii)
+- [@asrulfami](https://github.com/asrulfami)
+- [@sheesheeee](https://github.com/sheesheeee)
 
 **How to Contribute**
 - Fork the repository.
